@@ -37,7 +37,7 @@ This project is a technical homework task for a FullStack Developer position. It
 3. Developing a Form Generator Component
 4. Implementing a Page Generator Component
 
-### Prerequisites - Node.js (>= 12.x) - npm or yarn
+### Prerequisites - Node.js (>= 18.x) - npm or yarn
 
 ### Running the project
 1. Clone the repository: git clone cd
