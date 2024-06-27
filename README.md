@@ -25,6 +25,10 @@ export default {
 }
 ```
 
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
 ## Overview
 This project is a technical homework task for a FullStack Developer position. It includes the following tasks:
 
@@ -40,7 +44,3 @@ This project is a technical homework task for a FullStack Developer position. It
 2. Install dependencies: npm install or yarn install
 3. Start the development server: npm run dev # or yarn run dev
 4. Open your browser and navigate to: http://localhost:3000
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
