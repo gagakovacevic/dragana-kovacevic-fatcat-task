@@ -1,6 +1,7 @@
 import { FormGenerator } from '@homework-app/components/FormGenerator';
 import { Card } from '@homework-app/components/landing/Card';
 import { List } from '@homework-app/components/List';
+import PageGenerator from '@homework-app/components/PageGenerator';
 import clsx from 'clsx';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { z } from 'zod';
@@ -10,7 +11,7 @@ const vscodeProjectLink = `vscode://file/${__CWD__}`;
 const cards = [
     {
         title: 'Transfer the project to TypeScript',
-        text: 'Your first task involves transitioning this project from JavaScript to TypeScript.',
+        text: 'The first task involves transitioning this project from JavaScript to TypeScript.',
         link: '#typescript',
     },
     {
@@ -71,13 +72,165 @@ export const Landing = () => {
                 <h3 className="text-lg text-black" id="list">
                     2. Create a scalable List Component
                 </h3>
-                <div className={'w-full h-[500px] overflow-y-auto'}>
-                    <List />
-                </div>
+                <List />
                 <h3 className="text-lg text-black" id="form">
                     3. Create a Form Generator Component
                 </h3>
                 <MyForm />
+                <h3 className="text-lg text-black" id="page">
+                    4. Create a Page Generator Component
+                </h3>
+                <PageGenerator
+                    data={[
+                        {
+                            type: 'Layout',
+                            props: {
+                                color: 'black',
+                            },
+                            components: [
+                                {
+                                    type: 'Hero',
+                                    props: {
+                                        title: 'Welcome to Our Website',
+                                        image: '/media/hero.png',
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            type: 'Layout',
+                            props: {
+                                color: 'white',
+                            },
+                            components: [
+                                {
+                                    type: 'ItemsShowcase',
+                                    props: {
+                                        items: [
+                                            {
+                                                title: 'Item 1',
+                                                description: 'Description 1',
+                                            },
+                                            {
+                                                title: 'Item 2',
+                                                description: 'Description 2',
+                                            },
+                                        ],
+                                    },
+                                },
+                                {
+                                    type: 'TrustBar',
+                                    props: {
+                                        title: 'Trusted by many',
+                                        images: [
+                                            '/media/landing/hero.svg',
+                                            '/media/landing/hero.svg',
+                                            '/media/landing/hero.svg',
+                                            '/media/landing/hero.svg',
+                                        ],
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            type: 'Layout',
+                            props: {
+                                color: 'lightblue',
+                            },
+                            components: [
+                                {
+                                    type: 'Cards',
+                                    props: {
+                                        cards: [
+                                            {
+                                                title: 'Card 1',
+                                                image: '/media/cards/shape1.svg',
+                                                description: 'Description 1',
+                                                background: 'bg-lightblue',
+                                                onClick: () =>
+                                                    alert('Card 1 clicked!'),
+                                                buttonText: 'Click Me',
+                                            },
+                                            {
+                                                title: 'Card 2',
+                                                image: '/media/cards/shape2.svg',
+                                                description: 'Description 2',
+                                                background: 'bg-lightblue',
+                                                onClick: () =>
+                                                    alert('Card 2 clicked!'),
+                                                buttonText: 'Click Me',
+                                            },
+                                        ],
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            type: 'Layout',
+                            props: {
+                                color: 'lightgreen',
+                            },
+                            components: [
+                                {
+                                    type: 'PanelShowcase',
+                                    props: {
+                                        items: [
+                                            {
+                                                title: 'Panel 1',
+                                                description: 'Description 1',
+                                                image: '/media/panel/shape1.svg',
+                                            },
+                                            {
+                                                title: 'Panel 2',
+                                                description: 'Description 2',
+                                                image: '/media/panel/shape2.svg',
+                                            },
+                                            {
+                                                title: 'Panel 3',
+                                                description: 'Description 3',
+                                                image: '/media/panel/shape3.svg',
+                                            },
+                                        ],
+                                    },
+                                },
+                            ],
+                        },
+                        {
+                            type: 'Layout',
+                            props: { color: 'lightcoral' },
+                            components: [
+                                {
+                                    type: 'Button',
+                                    props: {
+                                        onClick: () => alert('Button clicked!'),
+                                        children: 'Click Me',
+                                    },
+                                },
+                                {
+                                    type: 'Button',
+                                    props: {
+                                        onClick: () => alert('Button clicked!'),
+                                        children: 'Click Me',
+                                    },
+                                },
+                                {
+                                    type: 'Button',
+                                    props: {
+                                        onClick: () => alert('Button clicked!'),
+                                        children: 'Click Me',
+                                    },
+                                },
+                                {
+                                    type: 'Button',
+                                    props: {
+                                        onClick: () => alert('Button clicked!'),
+                                        children: 'Click Me',
+                                    },
+                                },
+                            ],
+                        },
+                    ]}
+                />
             </div>
         </section>
     );

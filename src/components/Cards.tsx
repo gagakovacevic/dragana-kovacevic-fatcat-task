@@ -2,21 +2,23 @@ import clsx from 'clsx';
 
 import { Button } from './Button';
 
-export const Cards = ({
-    cards,
-}: {
-    cards: {
-        title: string;
-        image: string;
-        description: string;
-        background: string;
-        onClick: () => void;
-        buttonText: string;
-    }[];
-}) => {
+type Card = {
+    title: string;
+    image: string;
+    description: string;
+    background: string;
+    onClick: () => void;
+    buttonText: string;
+};
+
+type CardProps = {
+    cards: Card[];
+};
+
+export const Cards = ({ cards }: CardProps) => {
     return (
-        <div className={clsx('flex', 'justify-center', 'items-center')}>
-            <div className={clsx('grid', 'grid-cols-2', 'gap-8', 'w-8/12')}>
+        <div className={'flex justify-center items-center'}>
+            <div className={'grid grid-cols-2 gap-8 w-8/12'}>
                 {cards.map(
                     ({
                         title,
@@ -28,22 +30,14 @@ export const Cards = ({
                     }) => (
                         <div
                             key={title}
-                            className={clsx('rounded-md', 'p-8', background)}
+                            className={clsx('rounded-md p-8', background)}
                         >
                             <img src={image} alt="Icon" width="120" />
                             <div className="my-8">
-                                <div
-                                    className={clsx(
-                                        'text-2xl',
-                                        'font-bold',
-                                        'mb-2'
-                                    )}
-                                >
+                                <div className="text-2xl font-bold mb-2">
                                     {title}
                                 </div>
-                                <div className={clsx('text-xl')}>
-                                    {description}
-                                </div>
+                                <div className={'text-xl'}>{description}</div>
                             </div>
                             <Button onClick={onClick}>{buttonText}</Button>
                         </div>

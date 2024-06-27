@@ -9,7 +9,7 @@ interface User {
 }
 
 // Using vanilla react to do fetching, but in production I'd use swr or react-query.
-export const List: React.FC = () => {
+export const List = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);

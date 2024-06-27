@@ -6,11 +6,7 @@ export const Button = (
     return (
         <button
             className={clsx(
-                'rounded-lg',
-                'px-4',
-                'py-2',
-                'bg-black',
-                'text-white',
+                'rounded-lg px-4 py-2 bg-black text-white',
                 props.className
             )}
             {...props}

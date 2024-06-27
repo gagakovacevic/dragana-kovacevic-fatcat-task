@@ -1,4 +1,11 @@
-export const Hero = ({ title, image }: { title: string; image: string }) => {
+import React from 'react';
+
+interface HeroProps {
+    title: string;
+    image: string;
+}
+
+export const Hero: React.FC<HeroProps> = ({ title, image }) => {
     return (
         <div className="flex row justify-center items-center gap-4 h-screen">
             <div className="w-4/12">
