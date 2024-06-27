@@ -1,4 +1,3 @@
-// useApi.ts
 import { useState } from 'react';
 
 interface ApiHook<T> {
